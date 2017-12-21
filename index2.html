@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="google-site-verification" content="VpHLOJbiVb8VT6st278GQbp9zolZWV4j_h9hm8ZtUBU" />
+	<title>QuikAV</title>
+
+	<!-- Google uses the same meta info -->
+	<meta name="description" content="QuikAV is simple, It's fast, and it comes with a virus free computer guarantee!">
+	<meta name="keywords" content="QuikAV, antivirus, virus removal">
+	<meta name="application-name" content="QuikAV">
+	<meta name="author" content="QuikAV">
+
+	<!-- for Facebook -->
+	<meta property="og:title" content="QuikAV" />
+	<meta property="og:type" content="Antivirus" />
+	<meta property="og:image" content="http://www.quikav.com/images/logo.png?1" />
+	<meta property="og:url" content="http://www.quikav.com/" />
+	<meta property="og:description" content="QuikAV is simple, It's fast, and it comes with a virus free computer guarantee!" />
+	<meta property="og:site_name" content="QuikAV">
+
+	<!-- for Twitter -->
+	<meta name="twitter:card" content="QuikAV" />
+	<meta name="twitter:title" content="QuikAV" />
+	<meta name="twitter:description" content="QuikAV is simple, It's fast, and it comes with a virus free computer guarantee!" />
+	<meta name="twitter:image" content="http://www.quikav.com/images/logo.png?1" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+
+	<!-- Loading the styles necessary for the application -->
+	<link rel="stylesheet" type="text/css" href="/admin/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="/admin/css/normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="/admin/css/theme.css"/>
+
+	<!-- Loading the third party scripts necessary for the application -->
+	<script type="text/javascript" src="/js/libs/jquery-1.11.0.min.js"></script>
+
+	<!-- Loading the application necessary for the application -->
+	<script type="text/javascript" src="/admin/js/index.js"></script>
+	<script type="text/javascript" src="/admin/js/validateform.js"></script>
+	<script type="text/javascript" src="/admin/js/sessioncheck.js"></script>
+
+</head>
+<body class="t-light-background-one t-font-regular">
+<div id="page" data-view="dashboard-paid-users">
+	<header class="app-header-container t-dark-background-one">
+		<div class="app-header-container__wrapper padding-right-left-largest">
+			<div class="app-header-container__app-logo inline-block">
+				<a href="/admin/paid-users" class="logo-image-small"></a>
+			</div>
+			<div class="app-header-container__app-navigation inline-block">
+				<nav class="app-navigation-wrapper">
+					<div class="app-navigation__link inline-block t-font-regular t-font-size-larger">
+						<a href="/admin/paid-users" class="t-light-color-one  padding-bottom-smallest">Paid Users</a>
+					</div>
+					<div class="app-navigation__link inline-block t-font-regular t-font-size-larger active">
+						<a href="/admin/trial-users" class="t-light-color-one padding-bottom-smallest">Trial Users</a>
+					</div>
+					<div class="app-navigation__link inline-block t-font-regular t-font-size-larger app-updates">
+						<a href="/admin/app-updates" class="t-light-color-one padding-bottom-smallest">App Updates</a>
+					</div>
+					<div class="app-navigation__link inline-block t-font-medium t-font-size-larger">
+						<a href="/admin/partner" class="t-light-color-one padding-bottom-smallest partner-header">Partners</a>
+					</div>
+				</nav>
+			</div>
+			<div class="app-header-container__app-user-profile float-right inline-block float-right">
+				<a href="javascript:void(0)" class="app-user-profile__link inline-block text-capitalize margin-top-bottom-large t-dark-color-one t-light-background-one capture align-center pointer" data-type="user-popup">V
+				</a>
+			</div>
+			<div class="app-header-container__app-search"></div>
+		</div>
+	</header>
+	<main class="app-main-container">
+		<div class="app-main-container__left-block"></div>
+		<div class="app-main-container__middle-block padding-bottom-largest">
+			<div class="middle-block-wrapper vanish">
+					<div class="middle-block__search-bar-wrapper margin-top-bottom-smaller hide">
+						<form name="dashboard-search-form" action="search/" method="GET" onsubmit="event.preventDefault();event.stopPropagation();">
+							<fieldset>
+								<div class="component-field-block shadow-space t-font-medium t-font-size-large relative">
+									<input type="search" maxlength="30" name="dashboard-search-form" title="Search" placeholder="Search name, phone number or order ID" class="no-padding padding-left-small dashboard-search-field material-view t-light-background-three border-box">
+									<span class="theme-sprite search-icon pointer capture" data-type="search-query" ></span>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div class="middle-block__search-results-filter-stats-wrapper search-content margin-right-left-smallest padding-top-smallest">
+						<div class="search-results-stats-wrapper hide float-left">
+							<span class="stats-holder t-font-size-largest t-font-regular t-dark-color-one">37 Users</span>
+						</div>
+						<div class="search-results-filter-wrapper float-right hide {{isDisplayFilter}} capture" data-type="filter"> <!-- need to overwride for several pages -->
+							<span class="filter-holder t-font-size-large t-font-regular t-dark-color-one pointer">Newest</span>
+							<span class="theme-sprite caret-down-icon pointer"></span>
+						</div>
+					</div>
+					<!-- detail view of dashboard starts here -->
+					<div class="middle-block_dashboard-detail-view search-content shadow-space">
+							<div class="dashboard-detail-view_wrapper material-view">
+									<div class="detail-view-header padding-left-large padding-top-small padding-bottom-small padding-right-small clear">
+										  <!-- <div class="float-left detail-view-navigation t-light-color-two pointer" onclick="history.back();">Back</div> -->
+										  <div class="float-left three-by-ten-width detail-view-navigation t-light-color-two pointer" onclick="history.back();"><span class="theme-sprite caret-left-icon vertical-align-middle margin-bottom-smallest"></span>Back</div>
+										  <div class="product-name float-left align-center t-dark-color-one four-by-ten-width"></div>
+										  <div class="float-right three-by-ten-width t-light-color-two capture pointer sms-confirmation align-right" data-id="{{phoneNumber}}" data-type="overlay" data-view="sms-confirmation">Resend Verification Code</div>
+									</div>
+									<div class="product-detail-wrapper padding-top-large trial-user-tab-view padding-right-large padding-left-large">
+										
+									<div class="product-detail-tab-view clear">
+											<div class="seven-by-ten-width float-left">
+											   <div class="padding-right-large">
+												 <div class="tab-list-wrapper">
+													  <ul class="clear tab-list">
+														<li class="float-left menu-name t-font-size-larger capture pointer selected transition-color" data-type="system_info">System Information</li>
+														<li class="float-left menu-name t-font-size-larger capture pointer transition-color" data-type="add_notes">Notes</li>
+													  </ul>
+												 </div>
+												 <div class="tab-content">
+														<div class="clear system-information">
+															
+														</div>
+													 </div>
+												</div>
+												
+											</div>
+											<div class="three-by-ten-width float-left padding-top-large">
+													<div class="product-status-block  status-blk border-small margin-bottom-large">
+
+													</div>
+											</div>
+				
+		</div>
+		<div class="app-main-container__right-block"></div>
+	</main>
+	<footer class="app-footer-container"></footer>
+	<div id="page__overlay" class="hide margin-auto vanish"></div>
+	<div id="page__modal-background" class="hide capture"></div>
+	<div id="page__toast-message" class=""></div>
+	<div id="page__spinner" class="margin-auto appear">
+  		<div class="spinner"></div><div class="spinner-text">LOADING</div>
+	</div>
+	<!-- Loading the application necessary for the application -->
+	<script type="text/javascript" src="/admin/js/overlay.js"></script>
+	<script>
+		function getDataFromServer() {
+	        var userObj = JSON.parse(localStorage.user);
+			if ( userObj && userObj.userType.toLowerCase() === "agent" ) {
+				$("body").addClass("agent");	
+			}
+			$(".system-information, .product-status-block").addClass("vanish");
+			var url = API+"trial/{id}";
+			var path = location.pathname;
+			path = path.split("/");
+			url = url.replace("{id}", path[3]);
+			server.request(url, "", "GET", server.response.trialUsersDetailView);
+		}
+		getDataFromServer();
+	</script>
+</div>
+</body>
+</html>
